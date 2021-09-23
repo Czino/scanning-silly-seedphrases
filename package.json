@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "bitcoinjs-lib": "^5.2.0",
+    "node-fetch": "^3.0.0"
+  }
+}

@@ -1,3 +1,9 @@
+hadcoins.txt
+hascoins.txt
+status.txt
+
+.DS_Store
+
 # Logs
 logs
 *.log

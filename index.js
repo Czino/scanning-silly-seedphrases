@@ -11,7 +11,7 @@ process.on('unhandledRejection', error => {
 
 const startingPoint = Number(process.argv[2] || 0)
 const snooze = 3000
-const gaplimit = 5
+const gaplimit = 3
 for (let sp = 0; sp < startingPoint; sp++) {
   mnemonics.shift()
 }

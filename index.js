@@ -18,13 +18,13 @@ for (let sp = 0; sp < startingPoint; sp++) {
 
 const sleep = async ms => new Promise(resolve => setTimeout(resolve, ms))
 
-fs.appendFileSync('status.txt', `Restart from ${startingPoint}\n`, {})
+fs.appendFileSync('status.txt', `\nRestart from ${startingPoint}\n`, {})
 
 ;(async () => {
   console.log('Scanning silly seed phrases')
   for (let m in mnemonics) {
     const mnemonic = mnemonics[m]
-    let message = `${(new Date()).getTime()} Scanning: ${Number(m) + Number(startingPoint)} ${mnemonic}`
+    let message = `\n${(new Date()).getTime()} Scanning: ${Number(m) + Number(startingPoint)} ${mnemonic}`
     console.log(message)
     fs.appendFileSync('status.txt', message, {})
 

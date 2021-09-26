@@ -59,7 +59,7 @@ fs.appendFileSync('status.txt', `\nRestart from ${startingPoint}\n`, {})
 
         result = await fetch(`https://mempool.space/api/address/${p2pkh44}`)
         result = await result.json()
-        hadUTXO = result.funded_txo_count - result.spent_txo_count > 0
+        hadUTXO = result.funded_txo_count > 0 && result.funded_txo_count - result.spent_txo_count === 0
         hasUTXO = result.funded_txo_count - result.spent_txo_count > 0
         if (hadUTXO) {
           const message = `The seed phrase ${mnemonic} had coins at path m/44'/0'/0'/0/${i}. The address is ${p2pkh44} \n`
